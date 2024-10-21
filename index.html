@@ -1,71 +1,61 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
-  <script src="index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
+  <h1>Weather App</h1>
   <form id="cityForm" action="">
-    <input type="text" placeholder="Enter city" id="city"/>
-    <input type="submit"/>
+    <select id="city" required>
+      <option value="">Select a city</option>
+      <option value="London">London</option>
+      <option value="New York">New York</option>
+      <option value="Tokyo">Tokyo</option>
+      <option value="Sydney">Sydney</option>
+      <option value="Toronto">Toronto</option>
+      <option value="Berlin">Berlin</option>
+      <option value="Paris">Paris</option>
+      <option value="Moscow">Moscow</option>
+      <option value="Beijing">Beijing</option>
+      <option value="Rio de Janeiro">Rio de Janeiro</option>
+    </select>
+    <input type="submit" value="Get Weather"/>
   </form>
 
   <h2>Today</h2>
   <section id="today">
     <table>
       <tr>
-        <th >
-          Current Temperature
-        </th>
-        <th>
-          Low
-        </th>
-        <th>
-          High
-        </th>
-        <th>
-          Humidity
-        </th>
-        <th>
-          Cloud Cover
-        </th>
+        <th>Current Temperature</th>
+        <th>Low</th>
+        <th>High</th>
+        <th>Humidity</th>
+        <th>Cloud Cover</th>
+        <th>Sunrise</th>
+        <th>Sunset</th>
       </tr>
       <tr>
-        <td id="temp">
-
-        </td>
-        <td id="low">
-
-        </td>
-        <td id="high">
-
-        </td>
-        <td id="humidity">
-
-        </td>
-        <td id="cloudCover">
-
-        </td>
-        <td id="sunrise">
-
-        </td>
-        <td id="sunset">
-
-        </td>
+        <td id="temp"></td>
+        <td id="low"></td>
+        <td id="high"></td>
+        <td id="humidity"></td>
+        <td id="cloudCover"></td>
+        <td id="sunrise"></td>
+        <td id="sunset"></td>
       </tr>
     </table>
   </section>
 
-  <!-- Optional -->
-  <canvas id="WeatherChart"></canvas>
+  <canvas id="WeatherChart" width="400" height="200"></canvas>
 
-  <h2>Five Day Forcast</h2>
-  <aside>
+  <h2>Five Day Forecast</h2>
+  <aside id="forecast"></aside>
 
-  </aside>
-
-
+  <script src="js/index.js"></script>
 </body>
 </html>
